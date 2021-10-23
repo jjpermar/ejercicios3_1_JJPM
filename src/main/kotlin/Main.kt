@@ -17,12 +17,26 @@ fun main(args: Array<String>) {
     println("$coche2")
     coche1.color = "Platino"
     coche1.matricula = "999994X"
+    coche2.color = "Gris"
     println("$coche1")
     println("$coche2")
 
     //Tercer ejercicio 5.8
     println("==".repeat(40))
     println("\t \t \t \t Ejercicio 5.8")
-    var tiempo1 = Tiempo(10, 5, 10)
-    println("$tiempo1")
+    print("Escriba las horas: ")
+    var hors: String = readLine().toString() as String
+    if (hors == "") {
+        println("Error: debes de escribir una hora...")
+    } else {
+        print("Escriba los minutos: ")
+        var min: String? = readLine()?.toString() as String
+        print("Escriba los segundos: ")
+        var segund: String? = readLine()?.toString() as String
+        var tiempo1 = Tiempo(hors, min, segund)
+        tiempo1.hora = hors
+        tiempo1.minuto = min
+        tiempo1.segundos = segund
+        println("$tiempo1")
+    }
 }

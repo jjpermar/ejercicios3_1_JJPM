@@ -1,3 +1,5 @@
+import javax.management.monitor.MonitorSettingException
+
 /**
  * Ejercicio 5.8
  *Crear una clase Tiempo, con atributos hora, minuto y segundo, que pueda ser construida indicando los tres atributos,
@@ -7,12 +9,27 @@
  *(y segundos, claro) e instancie la clase Tiempo mostrando su valor.
  */
 class Tiempo(
-    var hora: Int?,
-    var minuto: Int?,
-    var segundos: Int?
-) {
+    h: String,
+    m: String?,
+    s: String?
 
-        override fun toString(): String {
+) {
+    var hora: String = h
+    var minuto: String? = m
+        set(min) {
+            if (min == ""){
+                field = "0"
+            }
+        }
+    var segundos: String? = s
+        get() = field
+        set(seg) {
+            if(seg == ""){
+                field = "0"
+            }
+        }
+
+    override fun toString(): String {
         return "$hora h $minuto m $segundos s"
     }
 }
