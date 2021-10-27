@@ -39,4 +39,20 @@ fun main(args: Array<String>) {
         tiempo1.segundos = segund
         println("$tiempo1")
     }
+
+    //Cuerto ejercicio 5.9
+    println("==".repeat(40))
+    var cuenta1 = Cuenta("cuenta1", 00.00)
+    var cuenta2 = Cuenta("cuenta2",700.00)
+    var pepe = Persona("20074034M")
+    var creacion_de_cuentas = listOf<Cuenta>(cuenta1, cuenta2)
+    creacion_de_cuentas.forEach{println(pepe.insertar_cuentas(it))}
+    cuenta1.recibir_abono(1000.00)
+    cuenta2.realizar_pago(750.00)
+    println(pepe.moroso())
+    cuenta1.realizar_pago(500.00)
+    cuenta2.recibir_abono(500.00)
+    println(pepe.moroso())
+
+
 }

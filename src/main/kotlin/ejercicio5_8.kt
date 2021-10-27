@@ -17,14 +17,14 @@ class Tiempo(
     var hora: String = h
     var minuto: String? = m
         set(min) {
-            if (min == ""){
+            if (min == "") {
                 field = "0"
             }
         }
     var segundos: String? = s
         get() = field
         set(seg) {
-            if(seg == ""){
+            if (seg == "") {
                 field = "0"
             }
         }
