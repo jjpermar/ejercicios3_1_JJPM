@@ -42,6 +42,7 @@ fun main(args: Array<String>) {
 
     //Cuerto ejercicio 5.9
     println("==".repeat(40))
+    println("\t \t \t \t Ejercicio 5.9")
     var cuenta1 = Cuenta("cuenta1", 00.00)
     var cuenta2 = Cuenta("cuenta2",700.00)
     var pepe = Persona("20074034M")
@@ -54,5 +55,11 @@ fun main(args: Array<String>) {
     cuenta2.recibir_abono(500.00)
     println(pepe.moroso())
 
-
+    //Cuerto ejercicio 5.9
+    println("==".repeat(40))
+    println("\t \t \t \t Ejercicio 5.10")
+    var libro1 = Libro("La oscuridad","jhony", 100, 10)
+    println(libro1.obtener_datos())
+    //println(libro1.modificar(5))
+    println(libro1.obtener_datos())
 }
