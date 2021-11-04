@@ -1,5 +1,6 @@
 /**
- *Se quiere crear una clase Cuenta la cual se caracteriza por tener asociado un número de cuenta y un saldo disponible. Además, se puede consultar el saldo disponible, recibir abonos y realizar pagos.
+ *Se quiere crear una clase Cuenta la cual se caracteriza por tener asociado un número de cuenta y un saldo disponible. Además, se puede consultar el saldo disponible,
+ *  recibir abonos y realizar pagos.
  * La Persona puede tener asociada hasta 3 cuentas bancarias, y debe tener un método que permita añadir cuentas (hasta 3 que es el máximo).
  *También debe contener un método que devuelva si la persona es morosa (si tienen alguna cuenta con saldo negativo).
  *En el programa principal, instanciar un objeto Persona con un DNI cualquiera, así como dos objetos cuenta, una sin saldo inicial

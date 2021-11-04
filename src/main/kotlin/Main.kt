@@ -58,8 +58,15 @@ fun main(args: Array<String>) {
     //Cuerto ejercicio 5.9
     println("==".repeat(40))
     println("\t \t \t \t Ejercicio 5.10")
-    var libro1 = Libro("La oscuridad","jhony", 100, 10)
-    println(libro1.obtener_datos())
-    //println(libro1.modificar(5))
-    println(libro1.obtener_datos())
+    var libro1 = Libro("La oscuridad","jhony", 100, -15)
+    var libro2 = Libro("La oscuridad 2","paco", 100, -15)
+    var creacion_de_libros = listOf<Libro>(Libro("sas","aaa",11,15), libro1)
+    var conj = ConjuntoLibros()
+    creacion_de_libros.forEach{println(conj.insertar_libros(it))}
+    conj.elimina_por_autor("jhony")
+    conj.elimina_por_titulo("sas")
+    creacion_de_libros = listOf<Libro>(libro2)
+    creacion_de_libros.forEach{println(conj.insertar_libros(it))}
+    conj.mostrar_conjunto()
+
 }
